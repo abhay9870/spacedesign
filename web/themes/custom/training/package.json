@@ -1,0 +1,28 @@
+{
+  "name": "training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglifyjs": "^0.6.2",
+    "imagemin-pngquant": "^9.0.2",
+    "node-sass": "^7.0.1",
+    "sass": "^1.54.0"
+  },
+  "dependencies": {
+    "flexslider": "^2.7.2"
+  }
+}

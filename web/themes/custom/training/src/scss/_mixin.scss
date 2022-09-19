@@ -1,0 +1,16 @@
+@mixin icon {
+  display: inline-block;
+  color: grey;
+}
+@mixin d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin positioncenter {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -48%);
+}

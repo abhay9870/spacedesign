@@ -1,0 +1,92 @@
+.slider-section {
+  position: relative;
+  .slider {
+    background: $sliderbg;
+    #block-views-block-slider-block-1 #flexslider-main {
+      background: transparent;
+      padding: 79px;
+      border: none;
+      margin: 0;
+      .flex-control-nav {
+        bottom: 14px;
+        right: 25%;
+        @media screen and (max-width: 575px) {
+          right: 5%;
+        }
+      }
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .region-slider-right {
+    height: 100%;
+    #block-rightslider {
+      height: 100%;
+      div {
+        height: 100%;
+        p {
+          height: 100%;
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .flexslider .slides img {
+    width: 384px;
+    height: 500px;
+    @media screen and (max-width: (map-get($breakpoints, md) - 1)) {
+      height: 367px;
+    }
+  }
+
+  .slider-content {
+    @include positioncenter;
+    z-index: 2;
+    @media screen and (max-width: (map-get($breakpoints, md) - 1)) {
+      top: 54%;
+      transform: translate(-50%, -54%);
+    }
+    @media screen and (max-width: 575px) {
+      display: none;
+    }
+    p {
+      font-weight: $fw7;
+      font-size: $f55;
+      line-height: $f55;
+      text-align: $txtcenter;
+      letter-spacing: -0.02em;
+      color: $whitecolor;
+      @media screen and (max-width: 1024px) {
+        font-size: $f36;
+        line-height: $f44;
+      }
+    }
+    .btn {
+      margin-top: 15px;
+      padding: 8px 20px;
+      border-radius: 8px;
+      &:hover {
+        box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
+      }
+    }
+    .sl-btn {
+      background: $maincolor;
+      border: 1px solid $maincolor;
+      &:hover {
+        background: $linkhover;
+        border: 1px solid $linkhover;
+      }
+    }
+    a {
+      color: $whitecolor;
+      font-weight: $fw5;
+      font-size: $f18;
+      line-height: $f28;
+      text-decoration: none;
+    }
+  }
+}

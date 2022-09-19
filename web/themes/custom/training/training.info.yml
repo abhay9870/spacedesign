@@ -1,0 +1,30 @@
+name: Training
+type: theme
+base theme: classy
+description: "This theme for Training Purpose"
+package: Other
+core_version_requirement: ^8 || ^9
+libraries:
+  - training/global-styling
+
+regions:
+  header: "Header"
+  branding: "Branding"
+  search: "Header Search"
+  main_menu: "Main Menu"
+  highlight: "Highlight"
+  content: "Content"
+  breadcrumb: "breadcrumb"
+  mainslider: "Main Slider"
+  slider_right: "Slider Right"
+  slider_text: "Slider Text"
+  latest_update: "Latest Updates"
+  workflow_platform: "Workflow Platform"
+  training: "Training"
+  footer_top: "Footer Top"
+  footer_first: "Footer First"
+  footer_second: "Footer Second"
+  footer_third: "Footer Third"
+  footer_fourth: "Footer Fourth"
+  footer_bottom_left: "Footer Bottom Left"
+  footer_bottom_right: "Footer Bottom Right"

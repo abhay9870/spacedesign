@@ -1,0 +1,19 @@
+<?php
+
+use Drupal\file\Entity\File;
+
+function training_preprocess_page(&$variables)
+{
+  $site_config = \Drupal::config('system.site');
+  $variables['site_name'] = $site_config->get('name');
+  $variables['site_slogan'] = $site_config->get('slogan');
+  $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
+}
+function training_form_alter(&$form, &$form_state, $form_id)
+{
+  if ($form_id == 'search_block_form') {
+    $form['keys']['#attributes']['placeholder'] = t('Search');
+    $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
+    $form['actions']['submit']['#attributes']['class'][] = 'fas fa-search';
+  }
+}

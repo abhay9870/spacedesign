@@ -1,0 +1,74 @@
+{#
+/**
+* @file
+* Theme override to display a single component.
+*
+* footer area template
+*/
+#}
+<footer id="footer">
+  <div class="container">
+    {# Footer Top Twig Code Start here #}
+    {% if page.footer_top %}
+      <div class="row">
+        <div class="top-text col-sm-12">
+          {{ page.footer_top }}
+        </div>
+      </div>
+    {% endif %}
+    {# Footer Top Twig Code End here #}
+
+    {# Footer Middle Twig Code Start here #}
+    <div class="footer-mid">
+      <div class="row">
+        {% if page.footer_first %}
+          <div class="col-lg-4 col-md-4 col-sm-6">
+            {{ page.footer_first }}
+          </div>
+        {% endif %}
+        {% if page.footer_second %}
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            {{ page.footer_second }}
+          </div>
+        {% endif %}
+        {% if page.footer_third %}
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            {{ page.footer_third }}
+          </div>
+        {% endif %}
+        {% if page.footer_fourth %}
+          <div class="col-lg-2 col-md-2 col-sm-6">
+            {{ page.footer_fourth }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    {# Footer Middle Twig Code End here #}
+
+    {# Footer Bottom Twig Code Start here #}
+    <div class="footer-bottom">
+      <div class="row">
+        {% if page.footer_bottom_right %}
+          <div class="ft-btm-text col-lg-6 col-md-6 col-sm-12 order-sm-1 order-lg-2 order-md-2">
+            {{ page.footer_bottom_right }}
+          </div>
+        {% endif %}
+        {% if page.footer_bottom_left %}
+          <div class="ft-btm-text col-lg-6 col-md-6 col-sm-12 order-sm-2 order-lg-1 order-md-1">
+            {{ page.footer_bottom_left }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {# Footer Bottom Twig Code End here #}
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+

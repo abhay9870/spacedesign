@@ -1,0 +1,62 @@
+<div class="page-wrapper">
+  {% include directory ~ '/partials/header.twig' %}
+  {# Slider Section Twig Code Start here #}
+  <section class="slider-section">
+    <div class="row">
+      {% if page.mainslider %}
+        <div class="col-lg-6 col-md-6 col-sm-6 p-0 slider">
+          {{ page.mainslider }}
+        </div>
+      {% endif %}
+      {% if page.slider_right %}
+        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+          {{ page.slider_right }}
+        </div>
+      {% endif %}
+      {% if page.slider_text %}
+        {{ page.slider_text }}
+      {% endif %}
+    </div>
+  </section>
+  {# Slider Section Twig Code End here #}
+
+  {# Updates Section Twig Code Start here #}
+
+  <section class="updates-section">
+    {% if page.latest_update %}
+      <div class="container">
+        <div class="row">
+          {{ page.latest_update }}
+        </div>
+      </div>
+    {% endif %}
+  </section>
+  {# Updates Section Twig Code End here #}
+
+  {# Workflow Section Twig Code Start here #}
+  <section class="workflow-section">
+    {% if page.workflow_platform %}
+      <div class="container">
+        <div class="row">
+          {{ page.workflow_platform }}
+        </div>
+      </div>
+    {% endif %}
+  </section>
+  {# Workflow Section Twig Code End here #}
+
+  {# Training Section Twig Code Start here #}
+  <section class="training-section">
+    {% if page.training %}
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            {{ page.training }}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </section>
+  {# Training Section Twig Code End here #}
+  {% include directory ~ '/partials/footer.twig' %}
+</div>

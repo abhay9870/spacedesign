@@ -1,0 +1,45 @@
+.main-header .header-top {
+  @include d-flex;
+  padding: 10px 0 20px;
+  .site-logo a {
+    @include d-flex;
+    text-decoration: none;
+    color: $ylwcolor;
+    font-size: $f30;
+    font-weight: $fw6;
+    text-transform: uppercase;
+    letter-spacing: 3pt;
+  }
+  .search-sec .region-search {
+    @include d-flex;
+    @media screen and (max-width: 575px) {
+      display: none;
+    }
+    #block-training-search-form-narrow #search-block-form input#edit-keys {
+      display: none;
+    }
+    #block-training-search-form-narrow #search-block-form input#edit-submit {
+      background: none;
+      margin: 2px;
+      width: 70px;
+      height: 41px;
+      border: none;
+      border-radius: 10px;
+      font-size: $f18;
+      &:hover {
+        background: $maincolor;
+        color: $whitecolor;
+      }
+    }
+  }
+  #block-training-account-menu a {
+    padding: 12px 20px;
+    background: $maincolor;
+    color: $whitecolor;
+    border-radius: 10px;
+    &:hover {
+      background: $linkhover;
+      box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
+    }
+  }
+}

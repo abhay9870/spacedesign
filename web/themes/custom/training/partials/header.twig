@@ -1,0 +1,39 @@
+{#
+/**
+* @file
+* Theme override to display a single component.
+*
+* header area template
+*/
+#}
+
+<header class="header">
+    <section class="main-header">
+        <div class="container">
+            <div class="row header-top">
+                <div class="col-lg-2 col-md-6 col-sm-6 order-lg-1 order-md-1 order-sm-1 site-logo">
+                    <a href="{{ url('<front>') }}" title="{{ site_name }}">
+                        <img class="img-fluid" src="{{ logopath }}" title="{{ site_name }}" alt="logo" />
+                        {{ site_name }}
+                    </a>
+                    <div class="hamburger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                {% if page.main_menu %}
+                    <div class="col-lg-7 col-md-12 col-sm-12 order-lg-2 order-md-3 order-sm-3 main-nav">
+                        {{ page.main_menu }}
+                    </div>
+                {% endif %}
+                {% if page.search %}
+                    <div class="col-lg-3 col-md-6 col-sm-6 order-lg-3 order-md-2 order-sm-2 search-sec">
+                        {{ page.search }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+</header>
+

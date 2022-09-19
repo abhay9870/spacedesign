@@ -1,0 +1,158 @@
+/** Start Menu Section CSS  **/
+.main-nav {
+  ul.nav {
+    @media screen and (max-width: (map-get($breakpoints, sm) - 1)) {
+      margin: 0;
+      display: none;
+      position: fixed;
+      overflow: auto;
+      background-color: #333333e8;
+      padding: 20px 20px 20px 10px;
+      top: 0px;
+      left: 0px;
+      bottom: 0px;
+      z-index: 999;
+      text-align: left;
+      transition: all 2s ease-in-out;
+      &.active {
+        opacity: 1;
+        right: 15px;
+        display: block;
+        animation: fade 0.5s;
+      }
+    }
+    li {
+      @media screen and (max-width: (map-get($breakpoints, sm) - 1)) {
+        display: block;
+        margin: 0;
+        padding-right: 3.5rem;
+        width: 100%;
+        transition: background-color 0.5s;
+      }
+      &.active {
+        color: $navhover;
+      }
+      a {
+        color: $maincolor;
+        text-transform: capitalize;
+        font-weight: $fw6;
+        padding: 1.5rem 0.5rem;
+        letter-spacing: 0.1rem;
+        &.is-active {
+          color: $navhover;
+        }
+        &:hover {
+          color: $ylwcolor;
+        }
+        @media screen and (max-width: (map-get($breakpoints, md) - 1)) {
+          font-size: $f22;
+        }
+        @media screen and (max-width: (map-get($breakpoints, sm) - 1)) {
+          color: $whitecolor;
+          position: relative;
+          display: block;
+          padding: 10px 15px;
+          transition: all 1s;
+        }
+      }
+    }
+    span {
+      color: $maincolor;
+      text-transform: capitalize;
+      font-weight: $fw6;
+      padding: 1.5rem 0.5rem;
+      letter-spacing: 0.1rem;
+      @media screen and (max-width: (map-get($breakpoints, md) - 1)) {
+        font-size: $f22;
+      }
+      @media screen and (max-width: (map-get($breakpoints, sm) - 1)) {
+        color: $whitecolor;
+        padding: $f10 $f15;
+      }
+    }
+  }
+  @media screen and (max-width: (map-get($breakpoints, md) - 1)) {
+    @keyframes fade {
+      from {
+        transform: translateX(-200px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0px);
+        opacity: 1;
+      }
+    }
+  }
+}
+/** END Menu Section CSS  **/
+
+/** START Menu Toggle Button CSS **/
+@media screen and (max-width: (map-get($breakpoints, sm) - 1)) {
+  .site-logo {
+    .hamburger {
+      position: fixed;
+      top: 0px;
+      left: auto;
+      right: 0px;
+      padding: $f15;
+      margin: 0;
+      z-index: 10;
+      background-color: #ffffff;
+      transition: opacity 0.3s;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .line {
+        width: 37px;
+        height: 2px;
+        margin: 8px auto;
+        transition: all 0.3s ease-in-out;
+        border-radius: 5px;
+
+        &:nth-child(1) {
+          background-color: $mbnavbg;
+        }
+
+        &:nth-child(2) {
+          background-color: $mbnavbg;
+        }
+
+        &:nth-child(3) {
+          background-color: $mbnavbg;
+        }
+      }
+
+      &.isactive {
+        background-color: $mbnavbg;
+        border: none;
+        left: auto;
+        top: 0px;
+        right: 0px;
+        padding: 15px;
+        position: fixed;
+        margin: 0;
+        z-index: 3000;
+
+        .line:nth-child(2) {
+          opacity: 0;
+          background-color: $whitecolor;
+        }
+
+        .line:nth-child(1) {
+          transform: translateY(10px) rotate(45deg);
+          background-color: $whitecolor;
+        }
+
+        .line:nth-child(3) {
+          transform: translateY(-10px) rotate(-45deg);
+          background-color: $whitecolor;
+        }
+      }
+    }
+  }
+}
+
+/* End Menu Toggle Button Section */
