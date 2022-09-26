@@ -51,10 +51,9 @@
 /** Start Workflow Section CSS **/
 .workflow-section {
   .display_mode {
-    padding: 20px 0;
     .wf-img img {
       width: 100%;
-      margin: 10px 0;
+      margin: 20px 0;
     }
     .wf-content {
       margin: auto;
@@ -68,7 +67,7 @@
         letter-spacing: -0.02em;
         color: $maincolor;
         @media screen and (max-width: (map-get($breakpoints, md) - 1)) {
-          font-size: $f28;
+          font-size: $f26;
           line-height: $f30;
         }
         @media screen and (max-width: (map-get($breakpoints, sm) - 1)) {
@@ -149,8 +148,8 @@
         line-height: $f40;
       }
       @media screen and (max-width: (map-get($breakpoints, sm) - 1)) {
-        font-size: $f26;
-        line-height: $f32;
+        font-size: $f25;
+        line-height: $f30;
       }
     }
     .right-text p {

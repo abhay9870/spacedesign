@@ -1,5 +1,6 @@
 .main-header .header-top {
   @include d-flex;
+  // position: relative;
   padding: 10px 0 20px;
   .site-logo a {
     @include d-flex;
@@ -22,7 +23,7 @@
       background: none;
       margin: 2px;
       width: 70px;
-      height: 41px;
+      height: 48px;
       border: none;
       border-radius: 10px;
       font-size: $f18;

@@ -38,11 +38,13 @@
 <div class="page-wrapper">
 {% include directory ~ '/partials/header.twig' %}
   {% if page.breadcrumb %}
+<div class="container-fluid">
   <div class="featured-top">
     <aside class="featured-top__inner section layout-container clearfix" role="complementary">
       {{ page.breadcrumb }}
     </aside>
   </div>
+</div>
   {% endif %}
   {% if page.highlighted %}
   <div class="highlighted">
@@ -61,3 +63,4 @@
   </section>
 {% include directory ~ '/partials/footer.twig' %}
 </div>
+

@@ -20,13 +20,12 @@ ul {
   li {
     a {
       text-decoration: none;
-      color: $maincolor;
       span {
         display: none;
       }
-      &:hover {
-        color: $navhover;
-      }
+      // &:hover {
+      //   color: $navhover;
+      // }
     }
   }
 }

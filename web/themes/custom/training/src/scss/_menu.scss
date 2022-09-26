@@ -1,6 +1,9 @@
 /** Start Menu Section CSS  **/
 .main-nav {
   ul.nav {
+    @media screen and (max-width: (map-get($breakpoints, md) - 1)) {
+      justify-content: center !important;
+    }
     @media screen and (max-width: (map-get($breakpoints, sm) - 1)) {
       margin: 0;
       display: none;
@@ -16,7 +19,7 @@
       transition: all 2s ease-in-out;
       &.active {
         opacity: 1;
-        right: 15px;
+        right: 0px;
         display: block;
         animation: fade 0.5s;
       }
@@ -38,14 +41,12 @@
         font-weight: $fw6;
         padding: 1.5rem 0.5rem;
         letter-spacing: 0.1rem;
-        &.is-active {
-          color: $navhover;
-        }
         &:hover {
           color: $ylwcolor;
         }
         @media screen and (max-width: (map-get($breakpoints, md) - 1)) {
-          font-size: $f22;
+          font-size: $f20;
+          padding: 1.5rem 1rem;
         }
         @media screen and (max-width: (map-get($breakpoints, sm) - 1)) {
           color: $whitecolor;
@@ -62,8 +63,12 @@
       font-weight: $fw6;
       padding: 1.5rem 0.5rem;
       letter-spacing: 0.1rem;
+      &:hover {
+        color: $ylwcolor;
+      }
       @media screen and (max-width: (map-get($breakpoints, md) - 1)) {
-        font-size: $f22;
+        font-size: $f20;
+        padding: 1.5rem 1rem;
       }
       @media screen and (max-width: (map-get($breakpoints, sm) - 1)) {
         color: $whitecolor;

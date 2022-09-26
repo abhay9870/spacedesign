@@ -15,9 +15,9 @@ nfs_mount_enabled: false
 mutagen_enabled: false
 use_dns_when_possible: true
 composer_version: "2"
-web_environment: []
+web_environment:
+  - TERMINUS_MACHINE_TOKEN=rlPjuHb76owe9NhJtc7Q8loZnpxAHmsarZ_eGafD9sBlH;
 nodejs_version: "16"
-
 # Key features of ddev's config.yaml:
 
 # name: <projectname> # Name of the project, automatically provides

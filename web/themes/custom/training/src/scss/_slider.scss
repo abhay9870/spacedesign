@@ -4,14 +4,27 @@
     background: $sliderbg;
     #block-views-block-slider-block-1 #flexslider-main {
       background: transparent;
-      padding: 79px;
+      padding: 60px 90px 85px 80px;
       border: none;
       margin: 0;
       .flex-control-nav {
-        bottom: 14px;
-        right: 25%;
-        @media screen and (max-width: 575px) {
-          right: 5%;
+        position: absolute;
+        bottom: 10px;
+        width: 50%;
+        text-align: start;
+      }
+      .flex-control-paging li {
+        margin: 0 4px;
+        &:nth-child(1) {
+          margin-left: 0px;
+        }
+        a {
+          width: 9px;
+          height: 9px;
+          background-color: $whitecolor;
+        }
+        a.flex-active {
+          background-color: $maincolor;
         }
       }
     }
@@ -37,9 +50,9 @@
   }
   .flexslider .slides img {
     width: 384px;
-    height: 500px;
     @media screen and (max-width: (map-get($breakpoints, md) - 1)) {
-      height: 367px;
+      height: auto;
+      width: 100%;
     }
   }
 
@@ -64,6 +77,14 @@
         font-size: $f36;
         line-height: $f44;
       }
+      @media screen and (max-width: (map-get($breakpoints, md) - 1)) {
+        font-size: $f32;
+        line-height: $f32;
+      }
+      @media screen and (max-width: (map-get($breakpoints, sm) - 1)) {
+        font-size: $f30;
+        line-height: $f30;
+      }
     }
     .btn {
       margin-top: 15px;
@@ -76,6 +97,9 @@
     .sl-btn {
       background: $maincolor;
       border: 1px solid $maincolor;
+      @media screen and (max-width: (map-get($breakpoints, sm) - 1)) {
+        font-size: $f14;
+      }
       &:hover {
         background: $linkhover;
         border: 1px solid $linkhover;

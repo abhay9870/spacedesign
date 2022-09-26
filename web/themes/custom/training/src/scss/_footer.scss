@@ -30,8 +30,11 @@
       .region {
         padding: 10px 0;
       }
-      .region-footer-second .spc-links {
+      .spc-links li {
         padding-left: 1rem;
+        a {
+          color: #68737d;
+        }
       }
     }
     p {
@@ -110,6 +113,20 @@
         }
       }
     }
+    .region-footer-second {
+      li {
+        a {
+          color: #68737d;
+          font-weight: $fw5;
+          &:hover {
+            color: #bf3654;
+          }
+        }
+        span {
+          color: #68737d;
+        }
+      }
+    }
     .region-footer-third {
       ul {
         display: flex;
@@ -118,15 +135,20 @@
         li {
           a {
             color: #68737d;
+            font-weight: $fw5;
             &:hover {
               color: #bf3654;
             }
           }
-
           span {
             color: #68737d;
+            font-weight: $fw5;
           }
         }
+      }
+      #block-mainnavigation-2 > ul > li:nth-child(1),
+      li:nth-child(2) {
+        display: none;
       }
     }
     .region-footer-fourth {
@@ -137,7 +159,8 @@
         padding-left: 20px;
         li {
           a {
-            color: #68737d;
+            color: $maincolor;
+            font-weight: $fw5;
             &:after {
               content: "\2197";
               padding-left: 6px;
@@ -160,10 +183,19 @@
   .footer-bottom {
     border-top: 1px solid #e9ebed;
     padding-top: 30px;
+    font-weight: $fw5;
     @media screen and (max-width: (map-get($breakpoints, sm) - 1)) {
       text-align: center;
     }
     .ft-btm-text {
+      .region-footer-bottom-left {
+        .footer-text {
+          color: #68737d;
+          font-weight: $fw5;
+          font-size: $f16;
+          line-height: $f24;
+        }
+      }
       .region-footer-bottom-right {
         display: flex;
         justify-content: end;
@@ -171,14 +203,14 @@
           justify-content: center;
           padding-right: 30px;
         }
-        .footer-text {
-          color: #68737d;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 24px;
-        }
         .imp-links {
           display: flex;
+          li {
+            a {
+              color: $maincolor;
+              font-weight: $fw5;
+            }
+          }
         }
       }
     }

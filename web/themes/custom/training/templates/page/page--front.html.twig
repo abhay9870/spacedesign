@@ -1,8 +1,9 @@
 <div class="page-wrapper">
+
   {% include directory ~ '/partials/header.twig' %}
   {# Slider Section Twig Code Start here #}
   <section class="slider-section">
-    <div class="row">
+    <div class="row m-0">
       {% if page.mainslider %}
         <div class="col-lg-6 col-md-6 col-sm-6 p-0 slider">
           {{ page.mainslider }}
@@ -18,6 +19,7 @@
       {% endif %}
     </div>
   </section>
+
   {# Slider Section Twig Code End here #}
 
   {# Updates Section Twig Code Start here #}
